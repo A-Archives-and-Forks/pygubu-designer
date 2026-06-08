@@ -3,7 +3,7 @@
 <%block name="imports" filter="trim">
 import tkinter as tk
 import tkinter.ttk as ttk
-import ${module_name}ui as baseui
+import ${module_fqn}ui as baseui
 </%block>
 
 <%block name="class_definition" filter="trim">
