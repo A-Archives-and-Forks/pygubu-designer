@@ -106,6 +106,7 @@ class UI2Code(Builder):
         self._current_target = None
         self._generated_target_id = None
         self._generated_target_child_master = None
+        self._generated_widget_base_classname = None
         self.all_ids_as_attributes = False
         self._first_object_created = False
 
@@ -154,6 +155,7 @@ class UI2Code(Builder):
             "tkvariablehints": self._tkvariablehints,
             "methods": code_methods,
             "with_image_loader": has_images,
+            "widget_base_class": self._generated_widget_base_classname,
         }
         return cc
 
@@ -277,8 +279,13 @@ class UI2Code(Builder):
             if wmeta.classname in CLASS_MAP:
                 bclass = CLASS_MAP[wmeta.classname].builder
                 builder = bclass.factory(self, wmeta)
-                # uniqueid = builder.code_identifier()  # noqa: F841
-                # masterid = bmaster.code_child_master()
+
+                if self._script_type in (
+                    ScriptType.WIDGET,
+                    ScriptType.WIDGET_DS,
+                ):
+                    wbcname = self.code_classname_for(builder)
+                    self._generated_widget_base_classname = wbcname
 
                 for childmeta in self.uidefinition.widget_children(target):
                     childid = self._code_realize(builder, childmeta)
