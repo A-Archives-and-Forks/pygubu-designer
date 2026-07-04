@@ -36,6 +36,9 @@ class DesignerSettings(baseui.DesignerSettingsUI):
             CfgOption.WIDGET_NAMING_UFLETTER: dict(
                 model_transformer=bool_transformer
             ),
+            CfgOption.MAIN_TOOLBAR_VISIBLE: dict(
+                model_transformer=bool_transformer
+            ),
         }
         self.frm_settings = self.ffb_settings.get_form(form_config)
 
