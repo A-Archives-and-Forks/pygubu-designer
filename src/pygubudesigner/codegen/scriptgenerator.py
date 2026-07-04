@@ -173,6 +173,7 @@ class ScriptGenerator:
         context["import_lines"] = code["imports"]
         context["callbacks"] = code["callbacks"]
         context["with_image_loader"] = code["with_image_loader"]
+        context["widget_base_class"] = code["widget_base_class"]
 
         bcontext = context.copy()
         bcontext["class_name"] = context["class_name"] + "UI"
@@ -222,6 +223,7 @@ class ScriptGenerator:
         context["import_lines"] = code["imports"]
         context["callbacks"] = code["callbacks"]
         context["with_image_loader"] = code["with_image_loader"]
+        context["widget_base_class"] = code["widget_base_class"]
 
         tpl = makolookup.get_template("widgetds.py.mako")
         final_code = tpl.render(**context)
@@ -391,7 +393,6 @@ class ScriptGenerator:
             "class_name": config["main_classname"],
             "main_widget_is_toplevel": main_widget_is_toplevel,
             "main_widget": target,
-            "widget_base_class": target_class,
             "widget_code": None,
             "import_lines": None,
             "callbacks": "",
