@@ -1,6 +1,11 @@
 History
 =======
 
+Changes for version 0.44
+
+  * New main toolbar with basic buttons.
+  * Fix erroneous base class name generated when using custom widget templates.
+
 Changes for version 0.43.3
 
   * Fix for issue #318, missing import when using ttk styles definition file. (PR #319 @kootenay-joe)
