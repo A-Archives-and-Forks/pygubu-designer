@@ -87,7 +87,7 @@
         <property name="compound">left</property>
         <property name="image">tb_gencode</property>
         <property name="style">Toolbutton</property>
-        <property name="text" translatable="yes">Build Code</property>
+        <property name="text" translatable="yes">Build code</property>
         <layout manager="pack">
           <property name="ipadx">2p</property>
           <property name="padx">0p 1p</property>

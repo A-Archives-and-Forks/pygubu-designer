@@ -109,7 +109,7 @@ class MainToolbarUI(HideableFrame):
             compound="left",
             image=self.img_tb_gencode,
             style="Toolbutton",
-            text=_("Build Code"),
+            text=_("Build code"),
         )
         self.tbitem_gencode.pack(ipadx="2p", padx="0p 1p", side="left")
 
