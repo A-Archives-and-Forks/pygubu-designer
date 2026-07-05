@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pygubu 0.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-24 03:06-0300\n"
+"POT-Creation-Date: 2026-07-05 00:38-0300\n"
 "PO-Revision-Date: 2024-08-18 00:23+0800\n"
 "Last-Translator: larryw3i <larryw3i@163.com>\n"
 "Language-Team: Chinese - China <larryw3i@163.com>\n"
@@ -212,87 +212,95 @@ msgstr "Pygubu 助手"
 msgid "Pygubu Forms"
 msgstr "Pygubu 表单"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:43
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:39
+msgid "Icon position in the header."
+msgstr ""
+
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:44
 msgid ""
 "Specifies how to display the image relative to the text, in the case both "
 "text and image are present."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:49
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:50
 msgid "Dialog option. Sets default file extension."
 msgstr "对话框选项。设置默认文件扩展。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:79
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:57
+msgid "Determine if group is shown expanded or collapsed."
+msgstr ""
+
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:81
 msgid "When True, the widget is grouped within the container panel."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:121
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:123
 msgid "Image for the button."
 msgstr "按钮的图片。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:126
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:128
 #, fuzzy
 msgid "Image to use as icon."
 msgstr "按钮的图片。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:133
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:135
 msgid "Dialog option. Sets initial directory."
 msgstr "对话框选项。设置初始目录。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:142
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:144
 msgid "Tk variable associated to the key value."
 msgstr "键变量的关联值。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:188
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:190
 msgid "Determines if dialog is run in normal or modal mode."
 msgstr "决定对话框的运行模式：正常或 modal 模式。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:221
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:223
 msgid ""
 "Dialog option. Determines if path must exist for directory and file dialogs. "
 "The default value is True."
 msgstr "对话框选项。决定是否目录和文件的路径必须存在。默认值为“True”。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:227
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:229
 msgid "Initial path value."
 msgstr "初始路径值。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:268
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:275
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:270
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:277
 msgid "Combobox state."
 msgstr "Combobox 状态。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:282
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:284
 msgid "Path entry state."
 msgstr "路径填入状态。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:302
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:304
 #, fuzzy
 msgid "Text to display in tooltip."
 msgstr "切换箭头旁边显示的文本"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:309
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:311
 msgid "Tk variable whose value will be used in place of the text resource."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:315
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:317
 msgid "Tk variable associated to the path property."
 msgstr "路径属性的 Tk 关联值。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:321
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:323
 msgid "Dialog option. Sets dialog title."
 msgstr "对话框选项。设置对话框标题。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:325
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:327
 #, fuzzy
 msgid "Sets the widget title."
 msgstr "设置最大的窗口尺寸。"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:334
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:336
 msgid "Dialog type"
 msgstr "对话框类型"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:345
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:347
 msgid ""
 "In designer: json list of key, value pairs\n"
 "    Example: [[\"A\", \"Option 1 Label\"], [\"B\", \"Option 2 Label\"]]\n"
@@ -302,11 +310,11 @@ msgstr ""
 "　　示例：[[\"A\",\"选项1标签\"],[\"B\",\"选项 2标签\"]]\n"
 "在代码中：键值对的可迭代对象"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:355
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:357
 msgid "The weight value for the pane."
 msgstr "窗格的比重值"
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:360
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:362
 msgid "The weight value of the widget in the pane"
 msgstr "窗格的控件的比重值"
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pygubu 0.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-24 06:23-0300\n"
-"PO-Revision-Date: 2026-01-24 06:18-0300\n"
+"POT-Creation-Date: 2026-07-05 00:46-0300\n"
+"PO-Revision-Date: 2026-07-05 00:43-0300\n"
 "Last-Translator: Alejandro Autalán <alejandroautalan@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -21,19 +21,19 @@ msgstr ""
 msgid "Script Generator"
 msgstr "Generador de Script"
 
-#: src/pygubudesigner/codegen/scriptgenerator.py:442
+#: src/pygubudesigner/codegen/scriptgenerator.py:447
 msgid "Select widget"
 msgstr "Seleccione widget"
 
-#: src/pygubudesigner/codegen/scriptgenerator.py:448
+#: src/pygubudesigner/codegen/scriptgenerator.py:453
 msgid "Select template"
 msgstr "Seleccione plantilla"
 
-#: src/pygubudesigner/codegen/scriptgenerator.py:454
+#: src/pygubudesigner/codegen/scriptgenerator.py:459
 msgid "Enter classname"
 msgstr "Ingrese nombre de la clase"
 
-#: src/pygubudesigner/codegen/scriptgenerator.py:461
+#: src/pygubudesigner/codegen/scriptgenerator.py:466
 msgid "Invalid classname"
 msgstr "Nombre de clase inválido"
 
@@ -1325,7 +1325,7 @@ msgid "Detail"
 msgstr "Detalle"
 
 #: src/pygubudesigner/services/ask_save_changesui.py:84
-#: src/pygubudesigner/services/designersettingsui.py:166
+#: src/pygubudesigner/services/designersettingsui.py:182
 #: src/pygubudesigner/services/projectsettingsui.py:495
 msgid "Cancel"
 msgstr "Cancelar"
@@ -1335,7 +1335,8 @@ msgid "Discard"
 msgstr "Descartar"
 
 #: src/pygubudesigner/services/ask_save_changesui.py:98
-#: src/pygubudesigner/services/main_menu.py:123
+#: src/pygubudesigner/services/main_menu.py:130
+#: src/pygubudesigner/services/widgets/main_toolbarui.py:89
 msgid "Save"
 msgstr "Guardar"
 
@@ -1348,17 +1349,17 @@ msgid "Update preview"
 msgstr "Actualizar previsualización"
 
 #: src/pygubudesigner/services/context_menu.py:78
-#: src/pygubudesigner/services/main_menu.py:176
+#: src/pygubudesigner/services/main_menu.py:183
 msgid "Copy"
 msgstr "Copiar"
 
 #: src/pygubudesigner/services/context_menu.py:83
-#: src/pygubudesigner/services/main_menu.py:189
+#: src/pygubudesigner/services/main_menu.py:196
 msgid "Paste"
 msgstr "Pegar"
 
 #: src/pygubudesigner/services/context_menu.py:88
-#: src/pygubudesigner/services/main_menu.py:202
+#: src/pygubudesigner/services/main_menu.py:209
 msgid "Cut"
 msgstr "Cortar"
 
@@ -1367,48 +1368,52 @@ msgid "Delete"
 msgstr "Eliminar"
 
 #: src/pygubudesigner/services/context_menu.py:101
-#: src/pygubudesigner/services/main_menu.py:215
+#: src/pygubudesigner/services/main_menu.py:222
 msgid "Duplicate"
 msgstr "Duplicar"
 
-#: src/pygubudesigner/services/designersettingsui.py:71
+#: src/pygubudesigner/services/designersettingsui.py:78
 msgid "Preferred widget set:"
 msgstr "Conjunto de widgets preferido:"
 
-#: src/pygubudesigner/services/designersettingsui.py:79
+#: src/pygubudesigner/services/designersettingsui.py:86
 msgid "Preferred ttk theme:"
 msgstr "Tema ttk preferido:"
 
-#: src/pygubudesigner/services/designersettingsui.py:87
+#: src/pygubudesigner/services/designersettingsui.py:94
 msgid "Preferred layout manager:"
 msgstr "Layout manager preferido:"
 
-#: src/pygubudesigner/services/designersettingsui.py:104
+#: src/pygubudesigner/services/designersettingsui.py:111
 msgid "Center toplevel preview window"
 msgstr "Centrar ventana de previsualización toplevel"
 
-#: src/pygubudesigner/services/designersettingsui.py:115
+#: src/pygubudesigner/services/designersettingsui.py:120
+msgid "Show main toolbar"
+msgstr "Mostrar barra de herramientas principal"
+
+#: src/pygubudesigner/services/designersettingsui.py:131
 msgid "Widget naming"
 msgstr "Nombre de widgets"
 
-#: src/pygubudesigner/services/designersettingsui.py:125
+#: src/pygubudesigner/services/designersettingsui.py:141
 msgid "Use \"_\" as separator (e.g. button_1)"
 msgstr "Usar \"_\" como separador (ej. button_1)"
 
-#: src/pygubudesigner/services/designersettingsui.py:136
+#: src/pygubudesigner/services/designersettingsui.py:152
 msgid "Uppercase first letter (e.g. Button…)"
 msgstr "Primera letra en mayúscula (ej. Button1)"
 
-#: src/pygubudesigner/services/designersettingsui.py:147
+#: src/pygubudesigner/services/designersettingsui.py:163
 msgid "This does not affect previously generated names."
 msgstr "Esto no afecta los nombres generados previamente."
 
-#: src/pygubudesigner/services/designersettingsui.py:159
+#: src/pygubudesigner/services/designersettingsui.py:175
 #: src/pygubudesigner/services/projectsettingsui.py:118
 msgid "General"
 msgstr "General"
 
-#: src/pygubudesigner/services/designersettingsui.py:170
+#: src/pygubudesigner/services/designersettingsui.py:186
 #: src/pygubudesigner/services/projectsettingsui.py:499
 msgid "Ok"
 msgstr "Aceptar"
@@ -1429,125 +1434,127 @@ msgstr "Seleccione una opción válida."
 msgid "The path must exist."
 msgstr "La ruta debe existir."
 
-#: src/pygubudesigner/services/main_menu.py:62
+#: src/pygubudesigner/services/main_menu.py:69
 msgid "File"
 msgstr "Archivo"
 
-#: src/pygubudesigner/services/main_menu.py:74
+#: src/pygubudesigner/services/main_menu.py:81
+#: src/pygubudesigner/services/widgets/main_toolbarui.py:64
 msgid "New"
 msgstr "Nuevo"
 
-#: src/pygubudesigner/services/main_menu.py:87
+#: src/pygubudesigner/services/main_menu.py:94
 msgid "Open …"
 msgstr "Abrir …"
 
-#: src/pygubudesigner/services/main_menu.py:96
+#: src/pygubudesigner/services/main_menu.py:103
 msgid "Open recent …"
 msgstr "Abrir reciente …"
 
-#: src/pygubudesigner/services/main_menu.py:109
+#: src/pygubudesigner/services/main_menu.py:116
 msgid "Clear list"
 msgstr "Limpiar lista"
 
-#: src/pygubudesigner/services/main_menu.py:135
+#: src/pygubudesigner/services/main_menu.py:142
 msgid "Save as …"
 msgstr "Guardar como …"
 
-#: src/pygubudesigner/services/main_menu.py:148
+#: src/pygubudesigner/services/main_menu.py:155
 msgid "Restart …"
 msgstr "Reiniciar …"
 
-#: src/pygubudesigner/services/main_menu.py:161
+#: src/pygubudesigner/services/main_menu.py:168
 #: src/pygubudesigner/services/main_window.py:105
 msgid "Quit …"
 msgstr "Salir …"
 
-#: src/pygubudesigner/services/main_menu.py:164
+#: src/pygubudesigner/services/main_menu.py:171
 msgid "Edit"
 msgstr "Editar"
 
-#: src/pygubudesigner/services/main_menu.py:224
+#: src/pygubudesigner/services/main_menu.py:231
 msgid "Widget tree"
 msgstr "Arbol de widgets"
 
-#: src/pygubudesigner/services/main_menu.py:237
+#: src/pygubudesigner/services/main_menu.py:244
 msgid "Item up"
 msgstr "Item arriba"
 
-#: src/pygubudesigner/services/main_menu.py:250
+#: src/pygubudesigner/services/main_menu.py:257
 msgid "Item down"
 msgstr "Item abajo"
 
-#: src/pygubudesigner/services/main_menu.py:263
+#: src/pygubudesigner/services/main_menu.py:270
 msgid "Item delete"
 msgstr "Borrar item"
 
-#: src/pygubudesigner/services/main_menu.py:271
+#: src/pygubudesigner/services/main_menu.py:278
 msgid "Widget grid"
 msgstr "Grilla"
 
-#: src/pygubudesigner/services/main_menu.py:283
+#: src/pygubudesigner/services/main_menu.py:290
 msgid "Move up"
 msgstr "Mover arriba"
 
-#: src/pygubudesigner/services/main_menu.py:295
+#: src/pygubudesigner/services/main_menu.py:302
 msgid "Move down"
 msgstr "Mover abajo"
 
-#: src/pygubudesigner/services/main_menu.py:308
+#: src/pygubudesigner/services/main_menu.py:315
 msgid "Move left"
 msgstr "Mover izquierda"
 
-#: src/pygubudesigner/services/main_menu.py:321
+#: src/pygubudesigner/services/main_menu.py:328
 msgid "Move right"
 msgstr "Mover derecha"
 
-#: src/pygubudesigner/services/main_menu.py:334
+#: src/pygubudesigner/services/main_menu.py:341
 msgid "Reset layout"
 msgstr "Restablecer disposición de ventanas"
 
-#: src/pygubudesigner/services/main_menu.py:347
+#: src/pygubudesigner/services/main_menu.py:354
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: src/pygubudesigner/services/main_menu.py:350
+#: src/pygubudesigner/services/main_menu.py:357
 msgid "Project"
 msgstr "Proyecto"
 
-#: src/pygubudesigner/services/main_menu.py:361
+#: src/pygubudesigner/services/main_menu.py:368
 msgid "Settings"
 msgstr "Ajustes"
 
-#: src/pygubudesigner/services/main_menu.py:374
-msgid "Generate code"
-msgstr "Generar código"
+#: src/pygubudesigner/services/main_menu.py:381
+#: src/pygubudesigner/services/widgets/main_toolbarui.py:103
+msgid "Build code"
+msgstr "Construir código"
 
-#: src/pygubudesigner/services/main_menu.py:377
-#: src/pygubudesigner/services/main_windowui.py:205
+#: src/pygubudesigner/services/main_menu.py:384
+#: src/pygubudesigner/services/main_windowui.py:215
 msgid "Preview"
 msgstr "Previsualización"
 
-#: src/pygubudesigner/services/main_menu.py:389
+#: src/pygubudesigner/services/main_menu.py:396
 msgid "Preview in Toplevel"
 msgstr "Previsualizar en ventana"
 
-#: src/pygubudesigner/services/main_menu.py:402
+#: src/pygubudesigner/services/main_menu.py:409
 msgid "Close Toplevel previews"
 msgstr "Cerrar previsualizaciones"
 
-#: src/pygubudesigner/services/main_menu.py:411
+#: src/pygubudesigner/services/main_menu.py:418
 msgid "ttk theme"
 msgstr "tema ttk"
 
-#: src/pygubudesigner/services/main_menu.py:414
+#: src/pygubudesigner/services/main_menu.py:421
 msgid "Help"
 msgstr "Ayuda"
 
-#: src/pygubudesigner/services/main_menu.py:425
+#: src/pygubudesigner/services/main_menu.py:432
 msgid "Pygubu wiki"
 msgstr "Wiki de pygubu"
 
-#: src/pygubudesigner/services/main_menu.py:437
+#: src/pygubudesigner/services/main_menu.py:444
 msgid "About Pygubu"
 msgstr "Acerca de Pygubu"
 
@@ -1555,51 +1562,51 @@ msgstr "Acerca de Pygubu"
 msgid "Pygubu Designer"
 msgstr "Pygubu Designer"
 
-#: src/pygubudesigner/services/main_window.py:358
+#: src/pygubudesigner/services/main_window.py:361
 msgid "pygubu ui"
 msgstr "archivos de pygubu"
 
-#: src/pygubudesigner/services/main_window.py:358
+#: src/pygubudesigner/services/main_window.py:361
 #: src/pygubudesigner/services/projectsettings.py:38
 msgid "All"
 msgstr "Todos"
 
-#: src/pygubudesigner/services/main_window.py:365
+#: src/pygubudesigner/services/main_window.py:368
 msgid "Save current changes?"
 msgstr "¿Guardar cambios actuales?"
 
-#: src/pygubudesigner/services/main_window.py:367
+#: src/pygubudesigner/services/main_window.py:370
 msgid "If you don't save the document, all the changes will be lost."
 msgstr "Si no guarda el documento, todos los cambios se perderán."
 
-#: src/pygubudesigner/services/main_window.py:369
+#: src/pygubudesigner/services/main_window.py:372
 msgid "Save Changes"
 msgstr "Guardar Cambios"
 
-#: src/pygubudesigner/services/main_window.py:423
+#: src/pygubudesigner/services/main_window.py:435
 msgid "Checking main window visibility."
 msgstr "Verificando visibilidad de la ventana principal."
 
-#: src/pygubudesigner/services/main_window.py:425
+#: src/pygubudesigner/services/main_window.py:437
 msgid "Main window is not visible in current monitors."
 msgstr "La ventana principal no es visible en los monitores activos."
 
-#: src/pygubudesigner/services/main_window.py:429
+#: src/pygubudesigner/services/main_window.py:441
 msgid "Main window position fixed."
 msgstr "Posición de la ventana principal corregida."
 
-#: src/pygubudesigner/services/main_window.py:491
-#: src/pygubudesigner/services/main_window.py:519
-#: src/pygubudesigner/services/main_window.py:749
+#: src/pygubudesigner/services/main_window.py:506
+#: src/pygubudesigner/services/main_window.py:534
+#: src/pygubudesigner/services/main_window.py:764
 msgid "Error"
 msgstr "Error"
 
-#: src/pygubudesigner/services/main_window.py:506
+#: src/pygubudesigner/services/main_window.py:521
 #, python-format
 msgid "Project saved to %s"
 msgstr "Proyecto guardado a %s"
 
-#: src/pygubudesigner/services/main_window.py:663
+#: src/pygubudesigner/services/main_window.py:678
 msgid ""
 "Restart Pygubu Designer\n"
 "for changes to take effect."
@@ -1607,59 +1614,59 @@ msgstr ""
 "Reinicia Pygubu Designer\n"
 "para que los cambios tengan efecto."
 
-#: src/pygubudesigner/services/main_window.py:668
+#: src/pygubudesigner/services/main_window.py:683
 msgid "Open a project first."
 msgstr "Abre un proyecto primero."
 
-#: src/pygubudesigner/services/main_window.py:694
+#: src/pygubudesigner/services/main_window.py:709
 msgid "Project code generated."
 msgstr "Código del proyecto generado."
 
-#: src/pygubudesigner/services/main_window.py:709
+#: src/pygubudesigner/services/main_window.py:724
 msgid "newproject"
 msgstr "nuevo_proyecto"
 
-#: src/pygubudesigner/services/main_windowui.py:82
+#: src/pygubudesigner/services/main_windowui.py:92
 msgid "Components Palette"
 msgstr "Paleta de componentes"
 
-#: src/pygubudesigner/services/main_windowui.py:104
+#: src/pygubudesigner/services/main_windowui.py:114
 msgid "Project Tree"
 msgstr "Árbol del proyecto"
 
-#: src/pygubudesigner/services/main_windowui.py:120
+#: src/pygubudesigner/services/main_windowui.py:130
 msgid "Properties"
 msgstr "Propiedades"
 
-#: src/pygubudesigner/services/main_windowui.py:137
+#: src/pygubudesigner/services/main_windowui.py:147
 msgid "Appearance"
 msgstr "Apariencia"
 
-#: src/pygubudesigner/services/main_windowui.py:147
+#: src/pygubudesigner/services/main_windowui.py:157
 msgid "Layout"
 msgstr "Disposición"
 
-#: src/pygubudesigner/services/main_windowui.py:180
+#: src/pygubudesigner/services/main_windowui.py:190
 msgid "Sequence descriptor"
 msgstr "Descriptor de secuencia"
 
-#: src/pygubudesigner/services/main_windowui.py:183
+#: src/pygubudesigner/services/main_windowui.py:193
 msgid "Event Handler"
 msgstr "Controlador de evento"
 
-#: src/pygubudesigner/services/main_windowui.py:185
+#: src/pygubudesigner/services/main_windowui.py:195
 msgid "Add"
 msgstr "Agregar"
 
-#: src/pygubudesigner/services/main_windowui.py:186
+#: src/pygubudesigner/services/main_windowui.py:196
 msgid "actions"
 msgstr "acciones"
 
-#: src/pygubudesigner/services/main_windowui.py:196
+#: src/pygubudesigner/services/main_windowui.py:206
 msgid "Bindings"
 msgstr "Bindings"
 
-#: src/pygubudesigner/services/main_windowui.py:250
+#: src/pygubudesigner/services/main_windowui.py:260
 msgid "Messages"
 msgstr "Mensajes"
 
@@ -1923,50 +1930,54 @@ msgstr "Opciones para fila '{0}'"
 msgid "Column {0} options"
 msgstr "Opciones para columna '{0}'"
 
-#: src/pygubudesigner/services/widgets/layout_editor.py:65
+#: src/pygubudesigner/services/widgets/layout_editor.py:52
 msgid "Grid"
 msgstr "Grid"
 
-#: src/pygubudesigner/services/widgets/layout_editor.py:65
+#: src/pygubudesigner/services/widgets/layout_editor.py:52
 msgid "Pack"
 msgstr "Pack"
 
-#: src/pygubudesigner/services/widgets/layout_editor.py:65
+#: src/pygubudesigner/services/widgets/layout_editor.py:52
 msgid "Place"
 msgstr "Place"
 
-#: src/pygubudesigner/services/widgets/layout_editor.py:218
+#: src/pygubudesigner/services/widgets/layout_editor.py:207
 msgid "Change Manager"
 msgstr "Cambiar Manager"
 
-#: src/pygubudesigner/services/widgets/layout_editor.py:219
+#: src/pygubudesigner/services/widgets/layout_editor.py:208
 #, python-brace-format
 msgid "Change manager from {0} to {1}?"
 msgstr "¿Cambiar manager de {0} a {1}?"
 
-#: src/pygubudesigner/services/widgets/layout_editor.py:222
+#: src/pygubudesigner/services/widgets/layout_editor.py:211
 msgid "All container widgets will be updated."
 msgstr "Todos los widgets del contenedor serán actualizados."
 
-#: src/pygubudesigner/services/widgets/layout_editorui.py:58
+#: src/pygubudesigner/services/widgets/layout_editorui.py:77
 msgid "ER"
 msgstr ""
 
-#: src/pygubudesigner/services/widgets/layout_editorui.py:73
+#: src/pygubudesigner/services/widgets/layout_editorui.py:92
 msgid "EA"
 msgstr ""
 
-#: src/pygubudesigner/services/widgets/layout_editorui.py:88
+#: src/pygubudesigner/services/widgets/layout_editorui.py:107
 msgid "EW"
 msgstr ""
 
-#: src/pygubudesigner/services/widgets/layout_editorui.py:103
+#: src/pygubudesigner/services/widgets/layout_editorui.py:124
 msgid "EH"
 msgstr ""
 
-#: src/pygubudesigner/services/widgets/layout_editorui.py:117
+#: src/pygubudesigner/services/widgets/layout_editorui.py:138
 msgid "Manager:"
 msgstr "Manager:"
+
+#: src/pygubudesigner/services/widgets/main_toolbarui.py:78
+msgid "Open"
+msgstr "Abrir"
 
 #: src/pygubudesigner/services/widgets/properties_editor.py:125
 msgid "No help defined."
@@ -2021,6 +2032,12 @@ msgstr "%s no esta permitido a nivel raiz"
 #, python-format
 msgid "Not allowed at root level, %s is not a container."
 msgstr "No permitido a nivel raiz, %s no es un contenedor."
+
+#~ msgid "Build Code"
+#~ msgstr "Construir Código"
+
+#~ msgid "Generate code"
+#~ msgstr "Generar código"
 
 #~ msgid "Create a coded version of the UI definition."
 #~ msgstr "Crear un versión en codigo del archivo UI actual."

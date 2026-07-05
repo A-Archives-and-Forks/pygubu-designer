@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pygubu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-24 06:23-0300\n"
+"POT-Creation-Date: 2026-07-05 00:46-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -204,95 +204,103 @@ msgstr ""
 msgid "Pygubu Forms"
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:43
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:39
+msgid "Icon position in the header."
+msgstr ""
+
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:44
 msgid ""
 "Specifies how to display the image relative to the text, in the case both "
 "text and image are present."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:49
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:50
 msgid "Dialog option. Sets default file extension."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:79
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:57
+msgid "Determine if group is shown expanded or collapsed."
+msgstr ""
+
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:81
 msgid "When True, the widget is grouped within the container panel."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:121
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:123
 msgid "Image for the button."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:126
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:128
 msgid "Image to use as icon."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:133
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:135
 msgid "Dialog option. Sets initial directory."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:142
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:144
 msgid "Tk variable associated to the key value."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:188
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:190
 msgid "Determines if dialog is run in normal or modal mode."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:221
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:223
 msgid ""
 "Dialog option. Determines if path must exist for directory and file dialogs. "
 "The default value is True."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:227
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:229
 msgid "Initial path value."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:268
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:275
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:270
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:277
 msgid "Combobox state."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:282
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:284
 msgid "Path entry state."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:302
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:304
 msgid "Text to display in tooltip."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:309
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:311
 msgid "Tk variable whose value will be used in place of the text resource."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:315
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:317
 msgid "Tk variable associated to the path property."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:321
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:323
 msgid "Dialog option. Sets dialog title."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:325
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:327
 msgid "Sets the widget title."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:334
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:336
 msgid "Dialog type"
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:345
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:347
 msgid ""
 "In designer: json list of key, value pairs\n"
 "    Example: [[\"A\", \"Option 1 Label\"], [\"B\", \"Option 2 Label\"]]\n"
 "In code: an iterable of key, value pairs"
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:355
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:357
 msgid "The weight value for the pane."
 msgstr ""
 
-#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:360
+#: ../pygubu/src/pygubu/plugins/pygubu/designer/properties.py:362
 msgid "The weight value of the widget in the pane"
 msgstr ""
 
