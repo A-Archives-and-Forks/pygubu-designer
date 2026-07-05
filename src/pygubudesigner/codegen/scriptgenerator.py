@@ -57,6 +57,7 @@ class ScriptGenerator:
         code = generator.generate_app_with_ui(uidef, target)
 
         context["import_lines"] = code["imports"]
+        context["widget_base_class"] = code["widget_base_class"]
         # Set project paths
         context["set_project_path"] = True
 
@@ -132,6 +133,7 @@ class ScriptGenerator:
         context["methods"] = code["methods"]
         context["target_code_id"] = code["target_code_id"]
         context["with_image_loader"] = code["with_image_loader"]
+        context["widget_base_class"] = code["widget_base_class"]
 
         bcontext = context.copy()
         bcontext["class_name"] = context["class_name"] + "UI"
