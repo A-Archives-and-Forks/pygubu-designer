@@ -11,6 +11,7 @@ import tkinter.ttk as ttk
 import pygubudesigner.actions as actions
 import pygubudesigner.services.widgets.main_toolbarui as baseui
 from pygubudesigner.services.image_loader import iconset_loader
+from pygubudesigner.i18n import translator
 
 
 #
@@ -20,7 +21,9 @@ from pygubudesigner.services.image_loader import iconset_loader
 
 class MainToolbar(baseui.MainToolbarUI):
     def __init__(self, master=None, **kw):
-        super().__init__(master, image_loader=iconset_loader, **kw)
+        super().__init__(
+            master, translator=translator, image_loader=iconset_loader, **kw
+        )
         self.app_root = self.winfo_toplevel()
 
     def on_item_clicked(self, widget_id):
