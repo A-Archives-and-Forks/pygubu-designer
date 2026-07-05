@@ -4,17 +4,19 @@
     <settings>
       <setting id="name">pygubu-designer window</setting>
       <setting id="description">This is the main pygubu-designer ui file.</setting>
-      <setting id="module_name">main_window</setting>
       <setting id="template">codescript</setting>
       <setting id="main_widget">mainroot</setting>
+      <setting id="module_namespace" />
+      <setting id="module_name">main_window</setting>
       <setting id="main_classname">MainWindow</setting>
       <setting id="output_dir">../src/pygubudesigner/services</setting>
+      <setting id="builder_namespace">custom_widgets</setting>
       <setting id="output_dir2" />
-      <setting id="import_tkvariables">False</setting>
-      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="generate_code_onsave">False</setting>
       <setting id="use_i18n">True</setting>
       <setting id="all_ids_attributes">False</setting>
-      <setting id="generate_code_onsave">False</setting>
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
       <setting id="use_window_centering_code">False</setting>
       <setting id="ttk_style_definition_file" />
     </settings>
@@ -24,6 +26,7 @@
       <customwidget path="./builders/properties_editorbo.py" />
       <customwidget path="builders/custom_rootbo.py" />
       <customwidget path="builders/project_tree_framebo.py" />
+      <customwidget path="builders/main_toolbarbo.py" />
     </customwidgets>
     <resources />
   </project>
@@ -42,6 +45,15 @@
           <property name="fill">both</property>
           <property name="side">top</property>
         </layout>
+        <child>
+          <object class="pygubudesigner.widget.MainToolbar" id="main_toolbar" named="True">
+            <layout manager="pack">
+              <property name="fill">x</property>
+              <property name="pady">0 2p</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
         <child>
           <object class="ttk.Panedwindow" id="mainpw" named="True">
             <property name="height">200</property>
