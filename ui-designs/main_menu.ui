@@ -279,7 +279,7 @@
             <property name="command" type="command" cbtype="with_wid">on_project_menuitem_clicked</property>
             <property name="compound">left</property>
             <property name="image">mi_code</property>
-            <property name="label" translatable="yes">Generate code</property>
+            <property name="label" translatable="yes">Build code</property>
           </object>
         </child>
       </object>

@@ -169,6 +169,9 @@ class MainWindow(baseui.MainWindowUI):
 
         self.mainwindow.protocol("WM_DELETE_WINDOW", self.__on_window_close)
 
+        # Setup toolbar visibility
+        self.main_toolbar.hidden = not preferences.main_toolbar_visible
+
         # Start user styles monitoring.
         # Used for refreshing/re-populating the styles combobox.
         # Used when the style definition gets updated (simulates clicking on the treeview item again.)
@@ -379,6 +382,15 @@ class MainWindow(baseui.MainWindowUI):
         w.bind(actions.FILE_QUIT, lambda e: self.quit())
         w.bind(actions.FILE_RESTART, lambda e: self.restart())
         w.bind(actions.FILE_RECENT_CLEAR, lambda e: self.rfiles_manager.clear())
+
+        w.bind(
+            actions.PROJECT_EDIT_SETTINGS,
+            lambda e: self._edit_project_settings(),
+        )
+        w.bind(
+            actions.PROJECT_BUILD_CODE, lambda e: self._project_code_generate()
+        )
+
         # On preferences save binding
         w.bind("<<PygubuDesignerPreferencesSaved>>", self.on_preferences_saved)
 
@@ -450,6 +462,9 @@ class MainWindow(baseui.MainWindowUI):
         self.tree_editor.default_layout_manager = (
             preferences.default_layout_manager
         )
+
+        # Setup toolbar visibility
+        self.main_toolbar.hidden = not preferences.main_toolbar_visible
 
     def on_close_execute(self):
         quit = self.fileactions.action_close()

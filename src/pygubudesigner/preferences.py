@@ -35,6 +35,7 @@ class CfgOption(StrEnum):
     WIDGET_NAMING_USE_UNDERSCORE = auto()
     WIDGET_NAMING_UFLETTER = auto()
     MAINDOCK_LAYOUT = auto()
+    MAIN_TOOLBAR_VISIBLE = auto()
     RECENT_FILES = auto()
 
 
@@ -48,6 +49,7 @@ default_config = {
     CfgOption.WIDGET_NAMING_UFLETTER: False,
     CfgOption.MAINDOCK_LAYOUT: {},
     CfgOption.RECENT_FILES: {},
+    CfgOption.MAIN_TOOLBAR_VISIBLE: True,
 }
 
 
@@ -150,6 +152,10 @@ class AppPreferences:
     @property
     def widget_set(self) -> str:
         return self.config[CfgOption.WIDGET_SET]
+
+    @property
+    def main_toolbar_visible(self) -> str:
+        return self.config[CfgOption.MAIN_TOOLBAR_VISIBLE]
 
 
 preferences = AppPreferences()

@@ -110,7 +110,16 @@ class DesignerSettingsUI:
         )
         self.center_preview.configure(text=_("Center toplevel preview window"))
         self.center_preview.grid(
-            column=0, columnspan=2, ipady="3p", row=3, sticky="w"
+            column=0, columnspan=2, ipady="2p", row=3, sticky="w"
+        )
+        self.main_toolbar_visible = Checkbutton(
+            fgeneral,
+            name="main_toolbar_visible",
+            field_name="main_toolbar_visible",
+        )
+        self.main_toolbar_visible.configure(text=_("Show main toolbar"))
+        self.main_toolbar_visible.grid(
+            column=0, columnspan=2, ipady="2p", row=4, sticky="w"
         )
         fgeneral.pack(fill="x", side="top")
         fgeneral.rowconfigure("all", pad=8)

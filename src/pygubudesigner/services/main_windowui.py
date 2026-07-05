@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+pygubu-designer window
+
+This is the main pygubu-designer ui file.
+
+UI source file: pygubu_main.ui
+"""
 import tkinter as tk
 import tkinter.ttk as ttk
 from pygubu.widgets.dockfw.dockframe import DockFrame
@@ -6,6 +13,7 @@ from pygubu.widgets.editabletreeview import EditableTreeview
 from pygubu.widgets.scrollbarhelper import ScrollbarHelper
 from pygubudesigner.services.widgets.custom_root import CustomRoot
 from pygubudesigner.services.widgets.layout_editor import LayoutEditor
+from pygubudesigner.services.widgets.main_toolbar import MainToolbar
 from pygubudesigner.services.widgets.project_tree_frame import ProjectTreeFrame
 from pygubudesigner.services.widgets.properties_editor import PropertiesEditor
 from pygubudesigner.services.widgets.treecomponentpalette import (
@@ -13,17 +21,17 @@ from pygubudesigner.services.widgets.treecomponentpalette import (
 )
 
 
-def i18n_translator_noop(value):
+def safe_i18n_translator(value):
     """i18n - Setup translator in derived class file"""
     return value
 
 
-def first_object_callback_noop(widget):
+def safe_fo_callback(widget):
     """on first objec callback - Setup callback in derived class file."""
     pass
 
 
-def image_loader_default(master, image_name: str):
+def safe_image_loader(master, image_name: str):
     """Image loader - Setup image_loader in derived class file."""
     img = None
     try:
@@ -44,12 +52,12 @@ class MainWindowUI:
         image_loader=None,
     ):
         if translator is None:
-            translator = i18n_translator_noop
+            translator = safe_i18n_translator
         _ = translator  # i18n string marker.
         if image_loader is None:
-            image_loader = image_loader_default
+            image_loader = safe_image_loader
         if on_first_object_cb is None:
-            on_first_object_cb = first_object_callback_noop
+            on_first_object_cb = safe_fo_callback
         # build ui
         self.mainroot = CustomRoot(master, className="PygubuDesigner")
         self.mainroot.configure(height=100, width=100)
@@ -63,6 +71,8 @@ class MainWindowUI:
 
         mainframe = ttk.Frame(self.mainroot)
         mainframe.configure(padding="2p")
+        self.main_toolbar = MainToolbar(mainframe, name="main_toolbar")
+        self.main_toolbar.pack(fill="x", pady="0 2p", side="top")
         self.mainpw = ttk.Panedwindow(
             mainframe, orient="vertical", name="mainpw"
         )

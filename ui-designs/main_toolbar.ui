@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.5" author="PygubuDesigner 0.41.4">
+  <project>
+    <settings>
+      <setting id="name">Main Toolbar</setting>
+      <setting id="description">Main toolbar for pygubu designer.</setting>
+      <setting id="template">widget</setting>
+      <setting id="main_widget">fmain</setting>
+      <setting id="module_namespace">pygubudesigner.services.widgets</setting>
+      <setting id="module_name">main_toolbar</setting>
+      <setting id="main_classname">MainToolbar</setting>
+      <setting id="output_dir">../src/pygubudesigner/services/widgets</setting>
+      <setting id="builder_namespace">pygubudesigner.widget</setting>
+      <setting id="output_dir2">builders</setting>
+      <setting id="generate_code_onsave">True</setting>
+      <setting id="use_i18n">True</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+    <resources />
+  </project>
+  <object class="pygubu.widgets.hideableframe" id="fmain" named="True">
+    <property name="height">20</property>
+    <property name="padding">2p</property>
+    <property name="width">20</property>
+    <layout manager="pack">
+      <property name="side">top</property>
+    </layout>
+    <child>
+      <object class="ttk.Button" id="tbitem_new" named="True">
+        <property name="command" type="command" cbtype="with_wid">on_item_clicked</property>
+        <property name="compound">left</property>
+        <property name="image">tb_new</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">New</property>
+        <layout manager="pack">
+          <property name="ipadx">2p</property>
+          <property name="side">left</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="tbitem_open" named="True">
+        <property name="command" type="command" cbtype="with_wid">on_item_clicked</property>
+        <property name="compound">left</property>
+        <property name="image">tb_open</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">Open</property>
+        <layout manager="pack">
+          <property name="ipadx">2p</property>
+          <property name="padx">1p</property>
+          <property name="side">left</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="tbitem_save" named="True">
+        <property name="command" type="command" cbtype="with_wid">on_item_clicked</property>
+        <property name="compound">left</property>
+        <property name="image">tb_save</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">Save</property>
+        <layout manager="pack">
+          <property name="ipadx">2p</property>
+          <property name="padx">1p 0p</property>
+          <property name="side">left</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Separator" id="separator1">
+        <property name="orient">vertical</property>
+        <layout manager="pack">
+          <property name="fill">y</property>
+          <property name="padx">4p</property>
+          <property name="side">left</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="tbitem_gencode" named="True">
+        <property name="command" type="command" cbtype="with_wid">on_item_clicked</property>
+        <property name="compound">left</property>
+        <property name="image">tb_gencode</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">Build Code</property>
+        <layout manager="pack">
+          <property name="ipadx">2p</property>
+          <property name="padx">0p 1p</property>
+          <property name="side">left</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
