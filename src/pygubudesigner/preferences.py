@@ -80,7 +80,11 @@ class AppPreferences:
     def load(self):
         with CONFIG_FILE.open() as cfile:
             try:
-                self.config = json.load(cfile, object_hook=self._json_hook)
+                user_config = json.load(cfile, object_hook=self._json_hook)
+                # Add missing config options in user file:
+                merged_config = default_config.copy()
+                merged_config.update(user_config)
+                self.config = merged_config
             except json.JSONDecodeError as e:
                 msg = f"Error in config file {CONFIG_FILE}"
                 raise RuntimeError(msg) from e
