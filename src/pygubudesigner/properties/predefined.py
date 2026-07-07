@@ -400,6 +400,7 @@ PROPERTY_DEFINITIONS = {
         "ttk.Scale": {"params": {"mode": "scalecommandentry"}},
         "tk.Scale": {"params": {"mode": "scalecommandentry"}},
         "tk.OptionMenu": {"params": {"mode": "simplecommandentry"}},
+        "ttk.OptionMenu": {"params": {"mode": "simplecommandentry"}},
         "help": help_for("command-pygubu"),
     },
     # ttk.Label
