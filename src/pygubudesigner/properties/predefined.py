@@ -1114,6 +1114,18 @@ PROPERTY_DEFINITIONS = {
         },
         "help": help_for("showvalue"),
     },
+    "size": {
+        "editor": "dynamic",
+        "params": {"mode": "integernumber"},
+        "ttk.Toggleswitch": {
+            "params": {
+                "mode": "choice",
+                "values": ("", "1", "2", "3"),
+                "state": "readonly",
+            },
+            "default": "",
+        },
+    },
     "spacing1": {
         "editor": "dynamic",
         "params": {"mode": "dimensionentry"},
@@ -1282,6 +1294,16 @@ PROPERTY_DEFINITIONS = {
         "editor": "dynamic",
         "params": {"mode": "text"},
         "help": help_for("text"),
+    },
+    "textangle": {
+        "editor": "dynamic",
+        "params": {
+            "mode": "spinbox",
+            "from_": 0,
+            "to": 360,
+            "increment": 1,
+        },
+        "default": "",
     },
     # ttk.Label
     "textvariable": {
