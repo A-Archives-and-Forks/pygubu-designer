@@ -310,7 +310,19 @@ class UI2Code(Builder):
         wmeta = bobject.wmeta
         cname = None
         if bobject.class_ is not None:
-            if wmeta.classname == "pygubudesigner.ToplevelOrTk":
+            imports_ = bobject.code_imports()
+            has_custom_imports = imports_ is not None
+
+            if has_custom_imports:
+                # Use custom import defined by builder first.
+                # FIXME: review this process.
+                cname = bobject.class_.__name__
+                for module, obj in imports_:
+                    if module not in self._code_imports:
+                        self._code_imports[module] = {obj}
+                    else:
+                        self._code_imports[module].add(obj)
+            elif wmeta.classname == "pygubudesigner.ToplevelOrTk":
                 self._import_tk = True
                 cname = "tk.Toplevel"
             elif wmeta.classname.startswith("tk."):
@@ -320,22 +332,12 @@ class UI2Code(Builder):
                 self._import_ttk = True
                 cname = wmeta.classname
             else:
-                imports_ = bobject.code_imports()
-                if imports_ is None:
-                    module = bobject.class_.__module__
-                    cname = bobject.class_.__name__
-                    if module not in self._code_imports:
-                        self._code_imports[module] = {cname}
-                    else:
-                        self._code_imports[module].add(cname)
+                module = bobject.class_.__module__
+                cname = bobject.class_.__name__
+                if module not in self._code_imports:
+                    self._code_imports[module] = {cname}
                 else:
-                    # FIXME: review this process.
-                    cname = bobject.class_.__name__
-                    for module, obj in imports_:
-                        if module not in self._code_imports:
-                            self._code_imports[module] = {obj}
-                        else:
-                            self._code_imports[module].add(obj)
+                    self._code_imports[module].add(cname)
         return cname
 
     def _process_imports(self):
