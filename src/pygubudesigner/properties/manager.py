@@ -29,21 +29,7 @@ class PropertiesManager:
             "help": definition.get("help", None),
             "default": definition.get("default", None),
         }
-        specific = {}
-        # Get editor parameters for a specific builder_uid
-        # First, search for exact match
-        for key in definition:
-            if key == builder_uid:
-                specific = definition[key]
-                break
-        if not specific:
-            # Search for partial match
-            for key in definition:
-                if key.endswith(".*"):
-                    needle = key[:-2]
-                    if needle in builder_uid:
-                        specific = definition[key]
-                        break
+        specific = PropertyRegistry.find_definition_for(pname, builder_uid)
         def_cached.update(**specific)
         final_params = def_cached["params"]
         if "mode" not in final_params:
