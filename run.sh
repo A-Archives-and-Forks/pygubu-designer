@@ -210,6 +210,8 @@ function all-examples {
         "user_input/userinputapp.py"
         "windowdeleteevent/demo1.py"
         "windowdeleteevent/demo2.py"
+        "plugin_customtkinter/simple/simpledemo.py "
+        "plugin_customtkinter/complex/complexdemoapp.py"
         )
     
     EXAMPLES_DIR=$PROJECT_ROOT"/examples";
