@@ -1,6 +1,13 @@
 History
 =======
 
+Changes for version 0.45
+
+  * codebuilder: give priority to code_imports defined in builder class.
+  * properties: add property definition for "size" and "textangle" from tk 9.1
+  * properties: fix editor for ttk.OptionMenu command property. refs #323
+  * properties.manager: refactor code to PropertyRegistry.find_definition_for
+
 Changes for version 0.44
 
   * New main toolbar with basic buttons.
