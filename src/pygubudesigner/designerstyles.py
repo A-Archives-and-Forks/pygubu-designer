@@ -54,6 +54,11 @@ designer_dboptions = {
 }
 
 designer_settings = {
+    "ExternalTextEditorButton.Toolbutton": {
+        "configure": {
+            "image": ImgLazyLoader("text_edit"),
+        }
+    },
     "ColorSelectorButton.Toolbutton": {
         "configure": {
             "image": ImgLazyLoader("color_picker"),

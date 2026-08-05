@@ -19,7 +19,6 @@ __all__ = [
     "SpinboxPropertyEditor",
     "ChoicePropertyEditor",
     "ChoiceByKeyPropertyEditor",
-    "TextPropertyEditor",
     "CheckbuttonPropertyEditor",
     "register_editor",
     "create_editor",
@@ -31,7 +30,6 @@ import tkinter as tk
 import tkinter.ttk as ttk
 
 from pygubu.widgets.combobox import Combobox
-from pygubu.widgets.scrollbarhelper import ScrollbarHelper
 
 EDITORS = {}
 KEY_PRESS_CB_MILISECONDS = 850
@@ -203,28 +201,6 @@ class SpinboxPropertyEditor(PropertyEditor):
         self._spinbox.configure(**kw)
 
 
-class TextPropertyEditor(PropertyEditor):
-    def _create_ui(self):
-        self._sbh = ScrollbarHelper(self)
-        self._sbh.grid(row=0, column=0, sticky="we")
-        self._text = text = tk.Text(self._sbh.container, width=20, height=3)
-        self._sbh.add_child(self._text)
-        self.rowconfigure(0, weight=1)
-        self.columnconfigure(0, weight=1)
-        text.bind("<FocusOut>", self._on_variable_changed)
-        text.bind("<KeyPress>", self._on_keypress)
-
-    def _get_value(self):
-        value = self._text.get("0.0", tk.END)
-        if value.endswith("\n"):
-            value = value[:-1]
-        return value
-
-    def _set_value(self, value):
-        self._text.delete("0.0", tk.END)
-        self._text.insert("0.0", value)
-
-
 class ChoicePropertyEditor(PropertyEditor):
     def _create_ui(self):
         self._cb_pending = False
@@ -371,7 +347,6 @@ register_editor("identifierentry", IdentifierPropertyEditor)
 register_editor("choice", ChoicePropertyEditor)
 register_editor("choice_key", ChoiceByKeyPropertyEditor)
 register_editor("spinbox", SpinboxPropertyEditor)
-register_editor("text", TextPropertyEditor)
 register_editor("checkbutton", CheckbuttonPropertyEditor)
 register_editor("naturalnumber", NaturalNumberEditor)
 register_editor("integernumber", IntegerNumberEditor)
@@ -394,11 +369,6 @@ if __name__ == "__main__":
     editor = EntryPropertyEditor(root)
     editor.pack(expand=True, fill="x")
     editor.edit("MyValue")
-    editor.bind("<<PropertyChanged>>", make_on_change_cb(editor))
-
-    editor = TextPropertyEditor(root)
-    editor.pack(expand=True, fill="x")
-    editor.edit("MyValue 2")
     editor.bind("<<PropertyChanged>>", make_on_change_cb(editor))
 
     editor = SpinboxPropertyEditor(root)

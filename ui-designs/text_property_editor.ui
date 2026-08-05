@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.5" author="PygubuDesigner 0.41.4">
+  <project>
+    <settings>
+      <setting id="name">Text property editor</setting>
+      <setting id="description">A design for text property editor.</setting>
+      <setting id="template">fnscript</setting>
+      <setting id="main_widget">fcontainer</setting>
+      <setting id="module_namespace" />
+      <setting id="module_name">text_property_editor</setting>
+      <setting id="main_classname">TextPropertyEditor</setting>
+      <setting id="output_dir">../../../../../../tmp</setting>
+      <setting id="builder_namespace">custom_widgets</setting>
+      <setting id="output_dir2" />
+      <setting id="generate_code_onsave">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+    <resources />
+  </project>
+  <object class="ttk.Frame" id="fcontainer" named="True">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout manager="pack">
+      <property name="expand">True</property>
+      <property name="fill">both</property>
+      <property name="side">top</property>
+    </layout>
+    <containerlayout manager="grid">
+      <property type="col" id="0" name="weight">1</property>
+      <property type="row" id="0" name="weight">1</property>
+    </containerlayout>
+    <child>
+      <object class="pygubu.widgets.ScrollbarHelper" id="_sbh" named="True">
+        <property name="scrolltype">both</property>
+        <property name="usemousewheel">false</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+          <property name="sticky">nsew</property>
+        </layout>
+        <child>
+          <object class="tk.Text" id="_text" named="True">
+            <property name="height">3</property>
+            <property name="width">20</property>
+            <layout manager="pack">
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="_bnt_external" named="True">
+        <property name="command" type="command" cbtype="simple">on_external_editor_clicked</property>
+        <property name="compound">image</property>
+        <property name="style">ExternalTextEditorButton.Toolbutton</property>
+        <property name="text" translatable="yes">📜</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">2p 0</property>
+          <property name="row">0</property>
+          <property name="sticky">ns</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

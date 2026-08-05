@@ -1,9 +1,7 @@
 import json
 from collections.abc import Iterable
-from .propertyeditor import (
-    TextPropertyEditor,
-    register_editor,
-)
+from .propertyeditor import register_editor
+from .textentry import TextPropertyEditor
 
 
 class JsonEntry(TextPropertyEditor):

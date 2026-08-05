@@ -13,10 +13,10 @@ from .propertyeditor import (
     IdentifierPropertyEditor,
     PropertyEditor,
     SpinboxPropertyEditor,
-    TextPropertyEditor,
     LayoutManagerPropertyEditor,
     create_editor,
 )
+from .textentry import TextPropertyEditor
 from .relativeentry import RelativeEntryPropertyEditor
 from .stickyentry import StickyPropertyEditor
 from .tkvarentry import TkVarPropertyEditor
