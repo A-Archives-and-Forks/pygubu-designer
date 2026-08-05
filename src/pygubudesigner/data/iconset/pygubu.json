@@ -264,6 +264,10 @@
       "fn": "ta-trash.svg",
       "uid": "named_id_delete",
       "width": 20
+    },
+    {
+      "fn": "ta-edit.svg",
+      "uid": "text_edit"
     }
   ],
   "custom_files": {}
