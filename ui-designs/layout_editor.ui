@@ -68,6 +68,11 @@
                   <property name="column">0</property>
                   <property name="row">0</property>
                 </layout>
+                <child>
+                  <object class="pygubu.widgets.Tooltip" id="tooltip1">
+                    <property name="text" translatable="yes">Reset expand</property>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
@@ -82,6 +87,11 @@
                   <property name="column">1</property>
                   <property name="row">0</property>
                 </layout>
+                <child>
+                  <object class="pygubu.widgets.Tooltip" id="tooltip2">
+                    <property name="text" translatable="yes">Expand and fill all sides</property>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
@@ -96,6 +106,11 @@
                   <property name="column">2</property>
                   <property name="row">0</property>
                 </layout>
+                <child>
+                  <object class="pygubu.widgets.Tooltip" id="tooltip3">
+                    <property name="text" translatable="yes">Expand and fill width</property>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
@@ -110,6 +125,11 @@
                   <property name="column">3</property>
                   <property name="row">0</property>
                 </layout>
+                <child>
+                  <object class="pygubu.widgets.Tooltip" id="tooltip4">
+                    <property name="text" translatable="yes">Expand and fill height</property>
+                  </object>
+                </child>
               </object>
             </child>
           </object>

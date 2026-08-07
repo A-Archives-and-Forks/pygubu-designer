@@ -9,6 +9,7 @@ UI source file: layout_editor.ui
 import tkinter as tk
 import tkinter.ttk as ttk
 from pygubu.widgets.scrolledframe import ScrolledFrame
+from pygubu.widgets.simpletooltip import Tooltip
 from pygubudesigner.properties.editors.propertyeditor import (
     LayoutManagerPropertyEditor,
 )
@@ -77,6 +78,8 @@ class LayoutEditorUI(ttk.Frame):
             text=_("ER"),
             width=-2,
         )
+        tooltip1 = Tooltip(self.expand_reset)
+        tooltip1.configure(text=_("Reset expand"))
         self.expand_reset.grid(column=0, row=0)
 
         def expand_reset_cmd_():
@@ -92,6 +95,8 @@ class LayoutEditorUI(ttk.Frame):
             text=_("EA"),
             width=-2,
         )
+        tooltip2 = Tooltip(self.expand_all)
+        tooltip2.configure(text=_("Expand and fill all sides"))
         self.expand_all.grid(column=1, row=0)
 
         def expand_all_cmd_():
@@ -107,6 +112,8 @@ class LayoutEditorUI(ttk.Frame):
             text=_("EW"),
             width=-2,
         )
+        tooltip3 = Tooltip(self.expand_width)
+        tooltip3.configure(text=_("Expand and fill width"))
         self.expand_width.grid(column=2, row=0)
 
         def expand_width_cmd_():
@@ -124,6 +131,8 @@ class LayoutEditorUI(ttk.Frame):
             text=_("EH"),
             width=-2,
         )
+        tooltip4 = Tooltip(self.expand_height)
+        tooltip4.configure(text=_("Expand and fill height"))
         self.expand_height.grid(column=3, row=0)
 
         def expand_height_cmd_():
