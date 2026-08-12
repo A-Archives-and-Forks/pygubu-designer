@@ -16,7 +16,9 @@ import keyword
 import logging
 import pathlib
 import codecs
+import re
 import tkinter as tk
+from typing import Any
 from tkinter import filedialog, messagebox
 
 import autopep8
@@ -210,7 +212,26 @@ class ScriptGenerator:
                 outfile.write(final_code)
                 logger.info("Generated code file: %s", outfn)
 
-    def _widgetds_code(self, generator, context):
+    def _load_user_code(self, target: pathlib.Path) -> dict[str, str]:
+        sections = {
+            "MODULE_IMPORTS": "",
+            "CLASS_DEFINITION": "",
+            "CLASS_BODY": "",
+            "MODULE_BODY": "",
+        }
+        if target.exists():
+            with codecs.open(target, "r", encoding="utf-8") as ifile:
+                old_user_code = ifile.read()
+            # retrieve user sections
+            for section_key in sections.keys():
+                pattern = rf"(#\s<{section_key}>.*?#\s</{section_key}>)"
+                res = re.search(pattern, old_user_code, re.DOTALL)
+                if res:
+                    # print(f"{section_key}: {res.group(1)}\n")
+                    sections[section_key] = res.group(1)
+        return sections
+
+    def _widgetds_code(self, generator, context: dict[str, Any]):
         """Widget direct subclass code generation."""
         uidef = self.tree.tree_to_uidef()
         target = context["target"]
@@ -227,13 +248,17 @@ class ScriptGenerator:
         context["with_image_loader"] = code["with_image_loader"]
         context["widget_base_class"] = code["widget_base_class"]
 
-        tpl = makolookup.get_template("widgetds.py.mako")
-        final_code = tpl.render(**context)
-        final_code = self._format_code(final_code)
-
         output_dir = context["output_dir"]
         module_name = context["module_name"]
         outfn = output_dir / (module_name + ".py")
+
+        user_blocks = self._load_user_code(outfn)
+        context.update(user_blocks)
+
+        tpl = makolookup.get_template("widgetds.py.mako")
+        final_code: str = tpl.render(**context)
+        final_code = self._format_code(final_code)
+
         if outfn.exists():
             with codecs.open(outfn, "r", encoding="utf-8") as ifile:
                 old_user_code = ifile.read()
